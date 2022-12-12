@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="YNHSuite" thread-count="3">
+	<listeners>
+		<listener class-name="gsh.registry.Listeners"/>
+  	</listeners>
+	  <test thread-count="5" name="Test">
+	  <groups>
+	  	<run>
+	  		<include name="Regression"/>
+	  	</run>
+	  </groups>
+	    <classes>
+	      <class name="gsh.registry.LoginTest">
+		   </class>
+	    </classes>
+	  </test>
+	  <test thread-count="5" name="dummy">
+	    <classes>
+	      <class name="gsh.registry.DummyTest">
+		   </class>
+	    </classes>
+	  </test>
+	  <test thread-count="5" name="AddNewPatient">
+	    <classes>
+	      <class name="gsh.registry.AddNewPatient">
+		   </class>
+	    </classes>
+	  </test>
+	  <test thread-count="5" name="TestMgmt">
+	    <classes>
+	      <class name="gsh.registry.UnderEvalTestMgmt">
+		   </class>
+	    </classes>
+	  </test>
+</suite> <!-- Suite -->
